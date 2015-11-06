@@ -1,14 +1,49 @@
 ul.menu {
 	margin: 0;
-	padding: 0;
+	padding-left: 150px;
+	font-size: 2rem;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
 	li {
 		display: inline;
 		margin-right: 10px;
 		a {
-			color: #333;
+			color: black;
 			padding: 10px;
-			background: #333;
-			color: white;
+			a:hover {
+				color: pink;
+
+			}
 		}
 	}
+}
+
+
+nav.nav-2 {
+	width: 200px;
+	height: 350px;
+	background: pink;
+	padding: 10px;
+	position: absolute;
+	top: 0px;
+	left: -280px;
+	margin: 0;
+	text-align: center;
+
+	li {
+		list-style-type: none;
+		font-size: 1rem;
+		padding-top: 40px;
+		margin-right: 50px;
+	}
+}
+
+nav.nav-2 i {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.position {
+	position: relative;
 }

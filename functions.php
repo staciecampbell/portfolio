@@ -64,9 +64,25 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
+    'move', //handle
+    get_template_directory_uri() . '/js/move.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+   wp_enqueue_script(
+    'stick', //handle
+    get_template_directory_uri() . '/js/stick/jquery.sticky.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+    array( 'jquery', 'plugins' , 'stick'), //dependencies
     null, // version number
     true //load in footer
   );

@@ -24,28 +24,189 @@ img {
 }
 
 body {
-	color: #333;
+	color: black;
+	font-family: 'Muli', sans-serif;
+	font-size: 62.5%;
+	letter-spacing: 1px;
+	position: relative;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1120px;
 	margin: 0 auto;
-}
-
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
 }
 
 .full {
 	width: 100%;
 }
 
+.main {
+	height: 100vh;
+}
+
+.about {
+	height: 100vh;
+	// margin-left: 100px;
+	position: relative;
+	h1 {
+		margin-left: 10%;
+	}
+}
+
+.portfolio-header h1{
+	margin-left: 55%;
+}
+
+.contact h1 {
+	margin-left: 10%;
+}
+
+.contact {
+	height: 100vh;
+}
+
+div.about-content {
+	margin-left: 200px;
+	width: 60%;
+	display: flex;
+	p {
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	line-height: 30px;
+	}
+}
+
+.details {
+	width: 215px;
+	bottom: -30px;
+}
+
+.test {
+	margin: 0;
+}
+
+.flex-parent {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 50px 0;
+	position: relative;
+	&:nth-child(even) {
+		flex-direction: row-reverse;
+		padding-left: 100px;
+	}
+}
+
+.live {
+	border: 2.5px solid black;
+	padding: 8px;
+	border-radius: 2px;
+}
+
+.test {
+	position: relative;
+	bottom: -22px;
+}
+
+.post-27, .post-21 {
+	text-align: right;
+	padding-right: 40px;
+}
+
+.post-22, .post-19 {
+	padding-left: 40px;
+}
+
+.auto-width {
+	border: 2px solid black;
+}
+
+.with_frm_style {
+	position: absolute;
+	bottom: 200px;
+	left: 200px;
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+
+}
+
+#field_t51gwq, #field_8wleyx, #field_3ijn4y, #field_ap80ti {
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 400px;
+}
+
+h2.contact {
+	margin-left: 125px;
+}
+
+.frm_submit input {
+	text-transform: lowercase;
+	border: 2px solid black;
+
+}
+
+.fa {
+	font-size: 1.5rem;
+}
+
+//SVG animations 
+.path    
+{
+  animation: draw 1.5s 1;
+  stroke-linecap: round;
+  stroke-miterlimit: 10; 
+  stroke-dasharray: 650; 
+  stroke-dashoffset: 639;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  stroke-width: 6px;
+  fill: none;
+  stroke-linecap: square;
+}
+.path {
+	animation-delay: 0.5s;	
+  stroke: #000000;
+}
 
 
+/* ANIMATIONS WOOOOO */
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
 
+svg {
+	position: absolute;
+	top: 150px;
+	left: 500px;
+}
 
+.footer {
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+}
+
+footer .container {
+	margin: 0 auto;
+}
+
+.fa-bars {
+	// position: fixed;
+}
 
