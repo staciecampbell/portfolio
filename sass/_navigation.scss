@@ -1,40 +1,56 @@
 ul.menu {
-	margin: 0;
-	padding-left: 150px;
-	font-size: 2rem;
+	margin: 0 500px;
+	padding-top: 50px;
+	font-size: 1.8rem;
 	font-weight: bold;
 	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: space-around;
+	z-index: 999;
 	li {
-		display: inline;
+		// display: inline;
 		margin-right: 10px;
+		padding: 10px;
+		list-style-type: none;
 		a {
 			color: black;
 			padding: 10px;
 			a:hover {
-				color: pink;
+				border-bottom: 4px solid blue;
 
 			}
 		}
 	}
 }
 
+nav.nav1 {
+	margin: 0 auto;
+	// border: 1px solid black;
+}
+
 
 nav.nav-2 {
-	width: 200px;
-	height: 350px;
-	background: pink;
+	// width: 150px;
+	// height: 350px;
 	padding: 10px;
 	position: absolute;
-	top: 0px;
+	top: 150px;
 	left: -280px;
 	margin: 0;
 	text-align: center;
-
-	li {
-		list-style-type: none;
-		font-size: 1rem;
-		padding-top: 40px;
-		margin-right: 50px;
+	position: fixed;
+	border: 3px solid black;
+	padding: 20px;
+	-webkit-box-shadow: 3px 3px 5px 2px #ccc;  
+	-moz-box-shadow:    3px 3px 5px 2px #ccc;  
+	box-shadow:         3px 3px 5px 2px #ccc; 
+	ul {
+		padding: 20px;
+		li {
+			list-style-type: none;
+			font-size: 1rem;
+			padding-top: 40px;
+		}
 	}
 }
 

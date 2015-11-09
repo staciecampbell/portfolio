@@ -1,5 +1,10 @@
 <footer>
   <div class="container">
+  <div class="social">
+  	<a href="http://twitter.com/staciecampbell" target="_blank"><i class="fa fa-twitter"></i></a>
+  	<a href="http://github.com/staciecampbell" target="_blank"><i class="fa fa-github-alt"></i></a>
+  	<a href="mailto:stacie@staciecampbell.ca"><i class="fa fa-envelope"></i></a>
+  </div>
     <p class="footer">Made by Stacie Campbell <?php echo date('Y'); ?></p>
   </div>
 </footer>

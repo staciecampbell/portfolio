@@ -2,11 +2,10 @@ $(function(){
 
 	console.log("It's working");
 
-	$('header').hide();
+	$('.container').hide();
 	
 	setTimeout(function() {
-     	$('.logo').fadeOut(500);
-     	$('header').fadeIn(1500);
+     	$('.container').fadeIn(1500);
  	 },1500);
 
 	 document.getElementById('go').onclick = function(e){
@@ -16,6 +15,10 @@ $(function(){
           .end();
       };
 
+      $('go').on('click', function(){
+      	('.nav-2').addClass('sticker');
+      });
+
       $('.exit').on('click', function(e){
       	e.preventDefault();
       	move('.nav-2')
@@ -23,10 +26,11 @@ $(function(){
       	.end()
       });
 
-      
-      
-          $(".sticker").sticky({topSpacing: 70});
-        
+      $(".sticker").sticky({topSpacing: 70});
+
+      $(".sticker2").sticky({topSpacing: 70});
      
+     // new WOW().init();
+
 });
 
