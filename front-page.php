@@ -26,9 +26,14 @@ get_header();  ?>
 		</nav>
 		<h1 class="title" id="about2">about</h1>
 		<div class="about-content">
-			<p>Hi! I’m Stacie Campbell, a front-end developer and designer located in Toronto, Canada. Originally from Vancouver, I moved across the country for a new adventure and to pursue a career in design. After completing my degree in Fashion Communication (BDes) at Ryerson
+			<p class="right">Hi! I’m Stacie Campbell, a front-end developer and designer located in Toronto, Canada. Originally from Vancouver, I moved across the country for a new adventure and to pursue a career in design. After completing my degree in Fashion Communication (BDes) at Ryerson
 			University,</p>
-			<p>I decided to diversify my skills and turned to front-end web development. I believe in creating user-friendly, aesthetically pleasing websites using the latest technologies and best practices. To view my resume click <a href="resume.html" class="resume"><strong>here.</strong></a></p>
+			<p class="left">I decided to diversify my skills and turned to front-end web development. I believe in creating user-friendly, aesthetically pleasing websites using the latest technologies and best practices. To view my resume click <a href="resume.html" class="resume"><strong>here.</strong></a></p>
+		</div>
+
+		<div class="about-mobile">
+			<p>Hi! I’m Stacie Campbell, a front-end developer and designer located in Toronto, Canada. Originally from Vancouver, I moved across the country for a new adventure and to pursue a career in design. After completing my degree in Fashion Communication (BDes) at Ryerson
+			University, I decided to diversify my skills and turned to front-end web development. I believe in creating user-friendly, aesthetically pleasing websites using the latest technologies and best practices. To view my resume click <a href="http://staciecampbell.ca/resume.pdf" target="_blank" class="resume"><strong>here.</strong></a></p>
 		</div>
 		<svg class="line4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
@@ -40,18 +45,6 @@ get_header();  ?>
 				c0,8.9-10,8.9-10,17.8"/>
 		</g>
 		</svg>
-	<!-- 	<div class="animate">
-			<svg class="line1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 viewBox="0 0 360 360" style="enable-background:new 0 0 360 360;" xml:space="preserve">
-			<style type="text/css">
-				.st0{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
-			</style>
-			<g>
-				<path class="st0" d="M44,25c0,8.9-10,8.9-10,17.8c0,8.9,10,8.9,10,17.8c0,8.9-10,8.9-10,17.8c0,8.9,10,8.9,10,17.8s-10,8.9-10,17.8
-					"/>
-			</g>
-			</svg>
-		</animate> -->
 
 		<a href="#home" class="sticker2 top"><i class="fa fa-chevron-up"></i></a>
 	</div>
@@ -69,8 +62,6 @@ get_header();  ?>
 	  <?php
       $projectTerms = wp_get_post_terms( $post->ID, 'project_type' );	
 
-      // Next, let's build our custom query!
-
       $projectQuery = new WP_Query( 
       	array( 
       		'posts_per_page' => 4, 
@@ -80,17 +71,17 @@ get_header();  ?>
       		) 
       ); ?>
 
-	<div class="flex-parent" id="details">
+	<div class="flex-parent">
       <?php if ( $projectQuery->have_posts() ) : ?>
       	<?php while ($projectQuery->have_posts()) : $projectQuery->the_post(); ?>
       		<?php $current_post_id = $post->ID; ?>
       		<div class="flex-parent">
-      		<div <?php post_class();?>>
+      		<div <?php post_class();?> id="<?php echo $current_post_id; ?>">
      			<div class="details">
 					<h2 class="portfolio"><?php the_field('project_title'); ?></h2>
 					<h3 class="short-desc"><?php the_field('short_description'); ?></h3>
 					<p class="description"><?php the_field('technologies'); ?></p>
-					<p class="test"><a href="<?php the_field('view_live'); ?>" target="_blank" class="live">view it live</a></p>
+					<p class="test"><a href=" <?php the_field('view_live'); ?> " target="_blank" class="live">view it live</a></p>
 				</div>
 			</div>
 		

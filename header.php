@@ -10,6 +10,7 @@
   <link href='https://fonts.googleapis.com/css?family=Muli:400,300|Montserrat: 400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/hover-min.css">
 
 
   <?php // Load our CSS ?>
@@ -51,15 +52,15 @@
 
   <nav class="nav1">
       <ul class="menu">
-        <li><a href="">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#portfolio">portfolio</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="" class="hvr-underline-reveal">home</a></li>
+        <li><a href="#about" class="hvr-underline-reveal">about</a></li>
+        <li><a href="#portfolio" class="hvr-underline-reveal">portfolio</a></li>
+        <li><a href="#contact" class="hvr-underline-reveal">contact</a></li>
       </ul>
     </nav>
   <div class="main">
 
-  <a href="#details" class="square-wrapper">
+  <a href="#21" class="square-wrapper">
     <svg class="square" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
     <style type="text/css">
@@ -72,7 +73,7 @@
     </svg>
   </a>
 
-  <a href="#details" class="triangle-wrapper">
+  <a href="#22" class="triangle-wrapper">
     <svg class="triangle" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
     <style type="text/css">
@@ -88,7 +89,7 @@
 </a>
 
 
-<a href="#details" class="squiggle-wrapper">
+<a href="#27" class="squiggle-wrapper">
     <svg class="squiggle" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
     <style type="text/css">
@@ -106,7 +107,7 @@
 </a>
 
 
-<a href="#details" class="diamond-wrapper">
+<a href="#19" class="diamond-wrapper">
     <svg class="diamond" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
     <style type="text/css">

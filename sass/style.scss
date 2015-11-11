@@ -59,17 +59,28 @@ a.svg {
 	}
 }
 
+a:active, a:focus {
+	outline: none;
+}
+
+a {
+	z-index: 9999999;
+}
+
+.hvr-underline-reveal:before {
+	background: #EE11E0;
+}
+
+a.fa-bars{
+	width: 50px;
+}
+
+.about-mobile {
+	display: none;
+}
+
 .portfolio-header h1{
 	margin-left: 55%;
-}
-
-.contact h1 {
-	margin-left: 10%;
-	// margin-top: 200px;
-}
-
-.contact {
-	// height: 100vh;
 }
 
 div.about-content {
@@ -80,8 +91,17 @@ div.about-content {
 	font-size: 1.1rem;
 	letter-spacing: 1px;
 	line-height: 30px;
-	padding-left: 20px;
 	}
+}
+
+p.right {
+	padding-right: 20px;
+	padding-left: 10px;
+}
+
+p.left {
+	margin-right: 10px;
+	padding-left: 20px;
 }
 
 .details {
@@ -112,15 +132,19 @@ div.about-content {
 	padding-left: 40px;
 }
 
+.live {
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
 .auto-width {
 	border: 2px solid black;
 }
 
 .with_frm_style {
 	margin-left: 115px;
+	margin-bottom: 150px;
 }
-
-
 
 #field_t51gwq, #field_8wleyx, #field_3ijn4y, #field_ap80ti {
 	border: 2px solid black;
@@ -157,8 +181,7 @@ nav a:hover {
 }
 
 //SVG animations 
-.path    
-{
+.path    {
   animation: draw 2s 1;
   stroke-linecap: round;
   stroke-miterlimit: 10; 
@@ -265,11 +288,10 @@ svg {
 svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 	width: 80px;
 	height: 80px;
-	// display: none;
 }
 
 .diamond-wrapper {
-	 position: absolute;
+	position: absolute;
 	top: 450px;
 	right: 300px;
 	.st1 {
@@ -320,16 +342,20 @@ svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 		stroke: blue;
 	}
 }
+
+.hide {
+	display: none;
+}
 	
 
-.squiggle-wrapper, .diamond-wrapper {
+a.squiggle-wrapper, a.diamond-wrapper {
 	transform: rotate(45deg) translateX(2px) rotate(-45deg);
 
 
--webkit-animation: orbit2 4s linear infinite; /* Chrome, Safari 5 */
-       -moz-animation: orbit2 1.5s linear infinite; /* Firefox 5-15 */
-         -o-animation: orbit2 1.5s linear infinite; /* Opera 12+ */
-            animation: orbit2 1.5s linear infinite;
+-webkit-animation: orbit2 4s linear infinite; 
+       -moz-animation: orbit2 1.7s linear infinite; 
+         -o-animation: orbit2 1.7s linear infinite;
+            animation: orbit2 1.7s linear infinite;
 }
 @-webkit-keyframes orbit2 {
 	from { 	-webkit-transform: rotate(0deg) translateX(2px) rotate(0deg); }
@@ -351,23 +377,23 @@ svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 	to   {  transform: rotate(360deg) translateX(2px) rotate(-360deg); }
 }
 
-.square-wrapper, .triangle-wrapper {
+a.square-wrapper, .triangle-wrapper {
 	transform: rotate(45deg) translateX(20px) rotate(-45deg);
 
 
-	-webkit-animation: orbit2 4s linear infinite; /* Chrome, Safari 5 */
-	       -moz-animation: orbit2 1.2s linear infinite; /* Firefox 5-15 */
-	         -o-animation: orbit2 1.2s linear infinite; /* Opera 12+ */
-	            animation: orbit2 1.2s linear infinite;
+	-webkit-animation: orbit2 4s linear infinite; 
+	       -moz-animation: orbit2 1.5s linear infinite; 
+	         -o-animation: orbit2 1.5s linear infinite; 
+	            animation: orbit2 1.5s linear infinite;
 	}
 	@-webkit-keyframes orbit2 {
 		from { 	-webkit-transform: rotate(0deg) translateX(20px) rotate(0deg); }
-		to   {  -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+		to   {  -webkit-transform: rotate(360deg) translateX(20px) rotate(-360deg); }
 	}
 
 	@-moz-keyframes orbit2 {
 		from { 	-moz-transform: rotate(0deg) translateX(20px) rotate(0deg); }
-		to   {  -moz-transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+		to   {  -moz-transform: rotate(360deg) translateX(20px) rotate(-360deg); }
 	}
 
 	@-o-keyframes orbit2 {
@@ -384,7 +410,36 @@ svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 //start of media queries
 
 @media all and (max-width: 1024px) {
+	.squiggle-wrapper {
+		left: 200px;
+		top: 80px;
+	}
 
+	.square-wrapper {
+		right: 200px;
+
+	}
+
+	.triangle-wrapper {
+		left: 250px;
+	}
+
+	.diamond-wrapper {
+		right: 200px;
+		top: 500px;
+	}
+
+	.social {
+		width: 300px;
+	}
+
+	.wrapper {
+		margin-left: 100px;
+	}
+
+	.sticker, .sticker2 {
+		margin-left: 50px;
+	}
 }
 
 
@@ -422,16 +477,39 @@ svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 	.flex-parent {
 		flex-direction: column;
 		align-items: center;
-		width: 100%;
-		.details {
-			margin-right: 0;
-			padding-right: 0;
-		}
+		width: 80%;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		&:nth-child(even) {
+		flex-direction: row;
+		width: 80%;
+		// border: 1px solid black;
+		padding: 0;
+		margin: 0;
+		// padding-left: 100px;
+	}
+}
+
+	.flex-parent .details  {
+		width: 80%;
+		margin-top: 50px;
+		margin-left: 0;
+		padding-left: 0;
+		text-align: left;
+		flex-direction: flex-start;
+		// border: 1px solid black;
 	}
 
-	.post27 {
-		padding-right: 0;
+	.post-27, .post-21 {
+		padding: 0;
+		margin: 0;
 	}
+
+	.post-22, .post-19 {
+		margin: 0;
+		padding: 0;
+		}
 
 	.social {
 		margin-top: 35px;
@@ -453,46 +531,107 @@ svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 
 @media all and (max-width: 480px){
 
+	.container {
+		width: 90%;
+	}
 	.logo {
 		left: 80px;
 		top: 150px;
 	}
 
-	h1.title {
-		margin-left: 70px;
+	nav.nav1 {
+		width: 100%;
+		margin-right: 10px;
 	}
 	nav ul.menu {
-		font-size: 1.3rem;
-		margin-left: 0;
+		font-size: 0.8rem;
 		display: flex;
-		flex-direction: column;
-		margin-left: 0;
+		flex-direction: row;
+		margin: 0 auto;
 		li {
-			padding-top: 10px;
+			padding-top: 40px;
+			margin-left: 0;
 		}
 	}
 
 	div.about-content {
-		display: flex;
-		flex-direction: column;
-		margin-left: 10px;
-		p {
-			width: 80%;
-			margin-left: 40px;
-			margin-top: 0;
-			margin-bottom: 0;
-		}
+		display: none;
+	}
+
+	h1.title {
+		text-align: center;
+		margin-left: 0;
+		padding-left: 0;
+		padding-top: 0;
+		margin-top: 10px;
+	}
+
+	.contact h1 {
+		margin-top: 100px;
+		margin-bottom: 50px;	}
+
+	.about-mobile {
+		display: block;
+		width: 70%;
+		font-size: 0.8rem;
+		margin: 0 auto;
+		margin-top: 0;
+		padding-top: 0;
+
 	}
 
 	.with_frm_style{
-		left: 60px;
-		bottom: 40px;
+		padding-left: 10px;
+		margin-left: 50px;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.social {
+		margin-left: 50px;
+		margin-bottom: 20px;
+	}
+
+	footer {
+		font-size: 0.5rem;
 	}
 
 	.portfolio-header {
 		margin-left: 0;
 	}
 
+	.squiggle-wrapper {
+		left: 20px;
+		top: 40px;
+	}
+
+	.square-wrapper {
+		left: 250px;
+		top: 40px;
+	}
+
+	.diamond-wrapper {
+		top: 300px;
+		right: 40px;
+	}
+
+	.triangle-wrapper {
+		left: 20px;
+		top: 280px;
+	}
+
+	svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
+		width: 60px;
+		height: 60px;
+	}
+
+	.line4, .line5 {
+		display: none;
+	}
+
+	.sticker2 {
+		margin-top: 400px;
+	}
 
 }
 

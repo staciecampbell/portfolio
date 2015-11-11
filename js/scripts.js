@@ -30,6 +30,10 @@ $(function(){
 
       $(".sticker2").sticky({topSpacing: 70});
      
+
+      // if($('header').is(':visible')){
+      //   $('.nav-2').addClass('hide');
+      // }
      // new WOW().init();
 
 });
