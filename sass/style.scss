@@ -71,8 +71,23 @@ a {
 	background: #EE11E0;
 }
 
+
+
 a.fa-bars{
 	width: 50px;
+}
+
+.fa-times:hover {
+	transition: all 0.1s;
+	font-size: 1.7rem;
+	color: #EE11E0;
+
+}
+
+.fa-bars:hover, .fa-chevron-up:hover {
+	transition: all 0.1s;
+	font-size: 1.7rem;
+	color: #EE11E0;
 }
 
 .about-mobile {
@@ -172,12 +187,12 @@ h2.contact {
 
 a:hover {
 	transition: color 0.5s ease;
-	color: blue;
+	color: #EE11E0;
 }
 
 nav a:hover {
 	transition: color 0.5s ease;
-	color: blue;
+	color: #EE11E0;
 }
 
 //SVG animations 
@@ -303,18 +318,42 @@ svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 	}
 }
 
+.diamond-wrapper p {
+	opacity: 0;
+	transition: all 0.5s;
+	padding-left: 15px;
+}
+
+.diamond-wrapper:hover p {
+	opacity: 1;
+	color: blue;
+}
+
 .square-wrapper {
 	position: absolute;
 	right: 400px;
 	top: 100px;
+
 
 	.st1 {
 		transition: all 0.5s;
 	}
 
 	&:hover .st1 {
-		stroke: #0dfe1e;
+		stroke: #0DFE1E;
 	}
+
+}
+
+.square-wrapper p {
+	opacity: 0;
+	transition: all 0.5s;
+	padding-left: 15px;
+}
+
+.square-wrapper:hover p {
+	opacity: 1;
+	color: #0DFE1E;
 }
 
 .triangle-wrapper {
@@ -326,8 +365,20 @@ svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 	}
 
 	&:hover .st1 {
-		stroke: #0dfe1e;
+		stroke: #0DFE1E;
 	}
+}
+
+.triangle-wrapper p {
+	opacity: 0;
+	transition: all 0.5s;
+	padding-left: 15px;
+
+}
+
+.triangle-wrapper:hover p {
+	opacity: 1;
+	color: #0DFE1E;
 }
 
 .squiggle-wrapper {
@@ -343,10 +394,23 @@ svg.circle, svg.square, svg.triangle, svg.squiggle, svg.diamond {
 	}
 }
 
+.squiggle-wrapper p {
+	opacity: 0;
+	transition: all 0.5s;
+	padding-left: 15px;
+}
+
+.squiggle-wrapper:hover p {
+	opacity: 1;
+	color: blue;
+}
+
 .hide {
 	display: none;
 }
-	
+
+
+
 
 a.squiggle-wrapper, a.diamond-wrapper {
 	transform: rotate(45deg) translateX(2px) rotate(-45deg);
@@ -491,9 +555,9 @@ a.square-wrapper, .triangle-wrapper {
 	}
 }
 
-	.flex-parent .details  {
+	.flex-parent  {
 		width: 80%;
-		margin-top: 50px;
+		margin-top: 0px;
 		margin-left: 0;
 		padding-left: 0;
 		text-align: left;
@@ -501,15 +565,23 @@ a.square-wrapper, .triangle-wrapper {
 		// border: 1px solid black;
 	}
 
+	.details {
+		text-align: left;
+		flex-direction: flex-start;
+		
+	}
+
 	.post-27, .post-21 {
 		padding: 0;
 		margin: 0;
+		padding-top: 50px;
 	}
 
 	.post-22, .post-19 {
 		margin: 0;
 		padding: 0;
-		}
+		padding-top: 50px;
+	}
 
 	.social {
 		margin-top: 35px;
@@ -526,7 +598,7 @@ a.square-wrapper, .triangle-wrapper {
 		width: 250px;
 	}
 
-	//more to come on portfolio section
+
 }
 
 @media all and (max-width: 480px){
@@ -601,8 +673,8 @@ a.square-wrapper, .triangle-wrapper {
 	}
 
 	.squiggle-wrapper {
-		left: 20px;
-		top: 40px;
+		left: 30px;
+		top: 50px;
 	}
 
 	.square-wrapper {
@@ -616,7 +688,7 @@ a.square-wrapper, .triangle-wrapper {
 	}
 
 	.triangle-wrapper {
-		left: 20px;
+		left: 30px;
 		top: 280px;
 	}
 
@@ -631,8 +703,44 @@ a.square-wrapper, .triangle-wrapper {
 
 	.sticker2 {
 		margin-top: 400px;
+		margin-left: 0;
+		padding-left: 0;
 	}
 
+	.sticker {
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	nav.nav-2 {
+		// height: 100vh;
+		// background: white;
+		// opacity: 0.9;
+		// top: 0;
+		// z-index: 999999999999999999;
+		// box-shadow: none;
+		// left: -280px;
+		display: none;
+
+
+	}
+
+	nav.nav-2 ul li {
+		font-size: 1.5rem;
+		padding-left: 50px;
+
+	}
+
+	.sticker {
+		display: none;
+	}
+
+	.fa {
+		font-size: 1rem;
+	}
+	.details {
+		width: 100%;
+	}
 }
 
 @media all and (max-width: 440px){

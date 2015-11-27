@@ -2,6 +2,10 @@ $(function(){
 
 	console.log("It's working");
 
+  $(".sticker").sticky({topSpacing: 70});
+
+  $(".sticker2").sticky({topSpacing: 70});
+
 	$('.container').hide();
 	
 	setTimeout(function() {
@@ -15,6 +19,8 @@ $(function(){
           .end();
       };
 
+
+
       $('go').on('click', function(){
       	('.nav-2').addClass('sticker');
       });
@@ -26,9 +32,7 @@ $(function(){
       	.end()
       });
 
-      $(".sticker").sticky({topSpacing: 70});
-
-      $(".sticker2").sticky({topSpacing: 70});
+      
      
 
       // if($('header').is(':visible')){

@@ -2,6 +2,8 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<?php // Load Meta ?>
+
+  <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
@@ -39,13 +41,7 @@
 
   <div class="container">
   <div class="divLogo2">
-  <!--   <svg class="logo2" version="1.1" id="Layer_1" x="0px" y="0px" width="218.592px" height="220.092px" viewBox="0 0 218.592 220.092">
-      <g>
-        <path class="path2" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M109.296,6.546c57.161,0,103.5,46.339,103.5,103.5
-          s-46.339,103.5-103.5,103.5s-103.5-46.339-103.5-103.5S52.135,6.546,109.296,6.546"/>
-        <text transform="matrix(1 0 0 1 61.6328 100.438)"><tspan x="0" y="0" font-family="'Montserrat'" font-size="30" font-weight="bold" letter-spacing="">stacie </tspan><tspan x="-27.328" y="38.4" font-family="'Montserrat'" font-weight="bold" font-size="30">campbell</tspan></text>
-      </g>
-      </svg> -->
+
     </div>
   <!-- <h1 class="title">stacie campbell</h1> -->
   <!-- <img src="<?php echo bloginfo('template_directory'); ?>/images/kanye.jpg" class="edit" alt="" />  -->
@@ -61,6 +57,7 @@
   <div class="main">
 
   <a href="#21" class="square-wrapper">
+  <p>project 2</p>
     <svg class="square" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
     <style type="text/css">
@@ -74,6 +71,7 @@
   </a>
 
   <a href="#22" class="triangle-wrapper">
+  <p>project 3</p>
     <svg class="triangle" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
     <style type="text/css">
@@ -90,6 +88,7 @@
 
 
 <a href="#27" class="squiggle-wrapper">
+<p>project 1</p>
     <svg class="squiggle" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
     <style type="text/css">
@@ -108,6 +107,7 @@
 
 
 <a href="#19" class="diamond-wrapper">
+<p>project 4</p>
     <svg class="diamond" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
     <style type="text/css">

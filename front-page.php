@@ -5,9 +5,6 @@
 */
 
 get_header();  ?>
-
-
- 
   
 </div> <!-- /.main -->
 
@@ -28,7 +25,7 @@ get_header();  ?>
 		<div class="about-content">
 			<p class="right">Hi! I’m Stacie Campbell, a front-end developer and designer located in Toronto, Canada. Originally from Vancouver, I moved across the country for a new adventure and to pursue a career in design. After completing my degree in Fashion Communication (BDes) at Ryerson
 			University,</p>
-			<p class="left">I decided to diversify my skills and turned to front-end web development. I believe in creating user-friendly, aesthetically pleasing websites using the latest technologies and best practices. To view my resume click <a href="resume.html" class="resume"><strong>here.</strong></a></p>
+			<p class="left">I decided to diversify my skills and turned to front-end web development. I believe in creating user-friendly, aesthetically pleasing websites using the latest technologies and best practices. To view my resume click <a href="http://staciecampbell.ca/resume.pdf" target="_blank" class="resume"><strong>here.</strong></a></p>
 		</div>
 
 		<div class="about-mobile">
@@ -53,6 +50,7 @@ get_header();  ?>
 <div class="portfolio-header" id="portfolio">
 	<div class="container">
 		<h1 class="title">portfolio</h1>
+
 		 <?php if (have_posts()) while (have_posts()): the_post(); ?>
 		 	 	<?php the_field('project_title'); ?>
 		 		<?php the_field('short_description'); ?>
